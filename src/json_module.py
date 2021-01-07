@@ -1,12 +1,12 @@
+import streamlit as st
 import requests
 import json
 
+@st.cache
 class getJSON:
-    status_code = ''
-    reason = ''
-    json = ''
 
     def __init__(self, url):
+
         req = requests.get(url)
 
         self.status_code = req.status_code
@@ -15,6 +15,6 @@ class getJSON:
         if req.status_code == 200:
             json_data = json.loads(req.text)
         else:
-            json_data = req.reason
+            json_data = {}
 
         self.json = json_data
