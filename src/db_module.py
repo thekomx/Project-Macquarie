@@ -1,7 +1,7 @@
 import pandas as pd
 import sqlalchemy
 
-from config import api_key, db_connection_string
+from src.config import api_key, db_connection_string
 
 const_insert_row_max = 999
 

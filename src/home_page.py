@@ -2,10 +2,10 @@ import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go
 
-from config import api_key
-from markdown_module import get_markdown
-from json_module import getJSON
-from chart_config import chartTemplate
+from src.config import api_key
+from src.markdown_module import get_markdown
+from src.json_module import getJSON
+from src.chart_config import chartTemplate
 
 def get_chart():
     j = getJSON(f'https://financialmodelingprep.com/api/v3/historical-price-full/MQG.AX?from=2020-01-01&to=2020-12-31&apikey={api_key}')
@@ -32,5 +32,5 @@ def home():
     st.write('The diversity of our operations, combined with a strong capital position and robust risk management framework, has contributed to our 51-year record of unbroken profitability.')
     st.markdown('[Leran more ...](https://www.macquarie.com/au/en/about.html)')
 
-    st.title('Share Price')
+    st.title('Share Price :')
     get_chart()

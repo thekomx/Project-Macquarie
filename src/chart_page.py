@@ -4,9 +4,9 @@ import sqlalchemy
 import pandas as pd
 import plotly.graph_objects as go
 
-from config import db_connection_string, api_key
-from json_module import getJSON
-from chart_config import chartTemplate
+from src.config import db_connection_string, api_key
+from src.json_module import getJSON
+from src.chart_config import chartTemplate
 
 @st.cache
 def get_stock_list():
